@@ -1,4 +1,10 @@
-def add(url_path):
+import os
+
+HOME = os.environ['HOME']
+url_path = HOME + '.url'
+
+
+def add():
 
     print('Enter the title and url')
 
@@ -38,23 +44,37 @@ def add(url_path):
     print('complete')
 
 
-def config():
-  
-    print('a - add, r - remove, b - back')
-    i = input()
+def remove(length):
 
-    if i == 'a':
-        add()
+    while True:
 
-    if i == 'r':
-        remove()
+        i = int(input('Select the index of the stream you want to delete'))
 
-    if i == 'b':
-        pass
+        if i > 0 and i < length:
+            break
 
-    else:
-        print('Error')
-        config()
+        else:
+            print('Error')
+            continue
 
-    main()
-    
+    with open(url_path, 'r') as f:
+
+        stream_list = ['0']
+
+        for s in f.readlines():
+            stream_list.append(s)
+
+    stream_list.pop(i)
+    stream_list.pop(0)
+
+    with open(url_path, 'w') as f:
+
+        for s in stream_list:
+            f.write(s)
+
+    print('Complete')
+
+        
+
+
+    return 0
