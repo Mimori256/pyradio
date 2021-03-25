@@ -137,7 +137,7 @@ def main():
 
 
        elif select == 'q':
-           sys.exit()
+           sys.exit('bye')
 
        else:
            print('Error')
@@ -159,7 +159,6 @@ def main():
         main()
 
     else:
-        print('bye')
-        sys.exit()
+        sys.exit('bye')
 
 main()
