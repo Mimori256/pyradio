@@ -69,12 +69,13 @@ def get_radio_list(path):
 
 def generate_command(url,exist_contents):
 
-    name_option = ''
-
     if exist_contents == 'y':
-        name_option = get_name_path
+        option = '| ' + get_name_path
 
-    return 'mplayer {} | {}'.format(url,name_option)
+    else:
+        option = ' >> /dev/null'
+
+    return 'mplayer {} {}'.format(url,option)
 
 
 def main():

@@ -74,7 +74,4 @@ def remove(length):
 
     print('Complete')
 
-        
-
-
     return 0
