@@ -150,8 +150,10 @@ def main():
     print('Loading {}...'.format(title_list[select]))
 
     command = generate_command(url_list[select],icy_list[select],)
+    print('Type Ctrl+C to stop the program')
     os.system(command)
 
+    clear()
     print('Continue y/n')
 
     select=input()
