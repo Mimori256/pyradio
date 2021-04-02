@@ -11,7 +11,7 @@ def add():
     title = input('Title:')
     url = input('URL: ')
 
-    print('does this stream contain the ICY music imformation?')
+    print('does the stream contain the ICY music imformation?')
 
     while(1):
 

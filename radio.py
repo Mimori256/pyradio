@@ -111,7 +111,7 @@ def main():
         select = input()
         select = int(select) -1
         
-        if select <= 0 or select >= len(title_list):
+        if select < 0 or select >= len(title_list):
             print('Index Error')
             time.sleep(1)
             main()
