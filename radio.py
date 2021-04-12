@@ -103,7 +103,7 @@ def main():
         print('{} {} {} '.format(space, i+1, title_list[i]))
 
     print('')
-    print('Type the number of a station')
+    print('Type the number of a radio station you want to listen')
     print('c - config the url file,  q - quit')
     
     try:
@@ -154,9 +154,9 @@ def main():
     os.system(command)
 
     clear()
-    print('Continue y/n')
+    print('Continue?')
 
-    select=input()
+    select=input('type y/n: ')
 
     if select=='y':
         main()
