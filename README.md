@@ -1,5 +1,5 @@
 # pyradio  
-Manage internet radio statins for mplayer (can be used with Unix/Linux OS)
+Manage internet radio stations for mplayer (can be used with Unix/Linux OS)
 
 ## Requirements
 python 3.x
